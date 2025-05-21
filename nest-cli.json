@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bilibilisleep/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/bilibilisleep/tsconfig.app.json",
+    "typeCheck": false
+  },
+  "projects": {
+    "bilibilisleep": {
+      "type": "application",
+      "root": "apps/bilibilisleep",
+      "entryFile": "main",
+      "sourceRoot": "apps/bilibilisleep/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bilibilisleep/tsconfig.app.json"
+      }
+    },
+    "play": {
+      "type": "application",
+      "root": "apps/play",
+      "entryFile": "main",
+      "sourceRoot": "apps/play/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/play/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  },
+  "monorepo": true,
+  "root": "apps/bilibilisleep"
+}
